@@ -138,7 +138,7 @@ void draw(){
      }
      if (key == 'D' || key == 'd') {
       // *** COMPLETAR ACÁ ***
-      // Si presionamos la tecla D rotaremos el cubo en el eje X en sentido contrario a la tecla A
+      // Si presionamos la tecla D rotaremos el cubo en el eje Y en sentido contrario a la tecla A
       // *** FIN ***
      }
      if (key == 'Q' || key == 'q') {
