@@ -52,7 +52,12 @@ void setup(){
 void dibujarGrilla(int espacio){
   stroke(96,96,0);
   // *** COMPLETAR ACÁ *** 
-  // -- tú código para armar la grilla
+    for (int x = 0; x < width; x += espacio) {
+    line(x, 0, x, height);
+  }
+  for(int y = 0; y < height; y += espacio) {
+    line(0, y, width, y);
+  }
   // *** FIN ***
 }
 
@@ -102,7 +107,12 @@ void draw(){
    camera();
    // solo cambi el ángulo Y de la cámara
    // probar cambiar otros ánulos o más de uno a la vez
-   rotateY(radians(anguloCamera));
+   anguloCamera += 0.7;
+   if (mouseButton == LEFT) {
+     rotateX(radians(anguloCamera));
+   } else if (mouseButton == RIGHT) {
+     rotateY(radians(anguloCamera));
+   }
    endCamera();
   } 
   
@@ -129,38 +139,45 @@ void draw(){
       // tener en cuenta que cada vez que se presiona la tecla se incrementará 
       // el ángulo de rotación "rotaX" considerando además la "velocidadRotacion"
       // rotaX y velocidadRotacion son variables ya definidas
+      rotaX += 0.5 * velocidadRotacion;
       // *** FIN ***
     }
     if (key == 'S' || key == 's') {
       // *** COMPLETAR ACÁ ***
       // Si presionamos la tecla S rotaremos el cubo en el eje X en sentido contrario a la tecla W
+      rotaX -= 0.5 * velocidadRotacion;
       // *** FIN ***
      }
     if (key == 'A' || key == 'a') {
       // *** COMPLETAR ACÁ ***
       // Si presionamos la tecla A rotaremos el cubo en el eje Y 
+      rotaY += 0.5 * velocidadRotacion;
       // *** FIN ***
      }
      if (key == 'D' || key == 'd') {
       // *** COMPLETAR ACÁ ***
-      // Si presionamos la tecla D rotaremos el cubo en el eje X en sentido contrario a la tecla A
+      // Si presionamos la tecla D rotaremos el cubo en el eje Y en sentido contrario a la tecla A
+      rotaY -= 0.5 * velocidadRotacion;
       // *** FIN ***
      }
      if (key == 'Q' || key == 'q') {
       // *** COMPLETAR ACÁ ***
       // Si presionamos la tecla Q rotaremos el cubo en el eje Z 
+      rotaZ += 0.5 * velocidadRotacion;
       // *** FIN ***
      }
      if (key == 'E' || key == 'e') {
       // *** COMPLETAR ACÁ ***
       // Si presionamos la tecla E rotaremos el cubo en el eje Z en sentido contrario a la tecla W
+      rotaZ -= 0.5 * velocidadRotacion;
       // *** FIN ***
      }
   }
   
   // *** COMPLETAR ACÁ ***
-  // Acá hay que aplicar las rotaciones en función de los ejes datos por las variables que guardan los ángulos
-  // OJO con el orden de rotación
+  rotateX(radians(rotaX));
+  rotateY(radians(rotaY));
+  rotateZ(radians(rotaZ));
   // *** FIN ***
  
   

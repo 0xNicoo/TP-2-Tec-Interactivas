@@ -108,7 +108,7 @@ void draw(){
     // tener en cuenta la posición del cubo
     // ya que buscamos que la grilla lo corte al medio
     // *** FIN ***
-    translate(0,0,0);
+    translate(0, -50,150);
     dibujarGrilla(20);
     translate(0,50,-150);
   }
