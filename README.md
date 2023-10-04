@@ -8,10 +8,10 @@ Las partes se encuentra resueltas en el directorio dados_parte_00 y dados_parte_
 
 ## ETAPA 2
 
-Se utilizaron assets de terceros, ya vienen con la textura incluida.
-Se utilizaron las siguientes luces: Directional Light, Point Light, Spot Light.
-Se utilizaron texturas y materiales para la superficie.
-Se agrego post procesado.
+-Se utilizaron [assets de terceros](https://github.com/0xNicoo/TP-2-Tec-Interactivas/tree/main/parte_02/models), ya vienen con la textura incluida.
+-Se utilizaron las siguientes luces: Directional Light, Point Light, Spot Light.
+-Se utilizaron [texturas](https://github.com/0xNicoo/TP-2-Tec-Interactivas/tree/main/parte_02/textures) y materiales para la superficie.
+-Se agrego post procesado.
 
 ### Installation
 
