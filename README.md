@@ -27,4 +27,6 @@ Para correr el projecto se usa vite
 npx vite
 ```
 
+### Demo
 
+Se puede ver la demo [aqui https://0xnicoo.github.io/](https://0xnicoo.github.io/).
